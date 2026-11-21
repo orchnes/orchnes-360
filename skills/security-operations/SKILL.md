@@ -1,6 +1,6 @@
 ---
 name: security-operations
-description: Defensive security operations for systems the user owns or is authorized to assess — application security (injection/SQLi, code vulnerabilities), vulnerability and CVE management, cloud security, email security (SPF/DKIM/DMARC), identity and passwords, social media account security, host and kernel hardening, monitoring and incident response. Read-only assessment first, risk-ranked findings with evidence, approved and reversible fixes, verification. Use when the user asks to secure, harden, audit, scan, check for vulnerabilities/CVEs, review passwords or email security, respond to an incident, or prepare for compliance (ISO 27001, SOC 2, KVKK/GDPR technical measures, NIS2).
+description: Defensive security operations for systems the user owns or is authorized to assess — application security (injection/SQLi, code vulnerabilities), vulnerability and CVE management, cloud security, email security (SPF/DKIM/DMARC), identity and passwords, social media account security, host and kernel hardening, authorized penetration testing, self-audits (installed software and update/EOL status, open ports, default/weak passwords, modules and plugins), monitoring and incident response. Read-only assessment first, risk-ranked findings with evidence, approved and reversible fixes, verification. Use when the user asks to secure, harden, audit, pentest, scan ports, check for vulnerabilities/CVEs, review passwords or email security, respond to an incident, or prepare for compliance (ISO 27001, SOC 2, KVKK/GDPR technical measures, NIS2).
 license: MIT
 ---
 
@@ -29,6 +29,8 @@ Defend, don't attack. Every action is authorized, scoped, logged, and reversible
 | Identity, passwords, MFA, social media accounts | `references/domains/identity.md` |
 | Linux/Windows hosts, kernel, servers | `references/domains/host-hardening.md` |
 | Detection, logging, incident response | `references/domains/incident-response.md` |
+| Authorized penetration test (recon → scan → analyse → safe PoC → report) | `references/domains/pentest.md` |
+| Self-audit: installed apps & updates/EOL, open ports, passwords/defaults, modules/plugins, users, persistence, TLS, data exposure | `references/domains/exposure-audit.md` |
 
 4. **Prioritize** — severity × exploitability × exposure × asset value. Use CVSS with EPSS and known-exploited lists (e.g. CISA KEV); internet-facing + exploited-in-the-wild comes first.
 5. **Remediate** — propose fixes with impact, effort and rollback; apply only with approval; prefer configuration and patching over custom code.
