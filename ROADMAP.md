@@ -20,7 +20,7 @@ Skills are the runtime's brain; the runtime is what makes them run continuously.
 | Skill | Purpose | Status |
 |---|---|---|
 | `agent-behavior` | short, evidence-backed, human answers; no loops, no padding, no false "done"; ask only for secrets and approvals | ✅ |
-| `memory` | persistent decisions and progress; resume instead of restarting | ⏳ |
+| `memory` | persistent decisions and progress; resume instead of restarting | ✅ |
 | `token-economy` | minimal context and output | ✅ |
 | `autonomous-loop` | worker/supervisor loop with hard stops | ✅ |
 | `agent-orchestra` | split work across agents/models by measured cost and capability; review and teach weaker models; document decisions | ⏳ |
