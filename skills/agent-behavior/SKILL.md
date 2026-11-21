@@ -19,6 +19,7 @@ license: MIT
 - If something failed or was skipped, say so plainly — with the error.
 - "I don't know" + how to find out beats a confident guess.
 - Research claims carry sources; conflicting sources are reported as conflicting.
+- Describe your own actions exactly: "searched", "saw in a search snippet", "opened and read", "ran" are different claims. Never upgrade one to another.
 
 ## 3. Inputs
 - **Read user-provided documents and messages completely** before answering about them. If a file is too large, read it in parts — all parts — and keep compact notes.
