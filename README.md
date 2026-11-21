@@ -12,12 +12,13 @@ model's context until the skill is needed, so installing many skills costs almos
 |---|---|
 | [`autonomous-loop`](skills/autonomous-loop/SKILL.md) | Goal-driven loop: a cheap worker model iterates, a top-ranked supervisor model only diagnoses, shows correct patterns, designs tests and signs off. Built-in stall detection and hard stops. |
 | [`planner`](skills/planner/SKILL.md) | End-to-end planning: frame → discover → decide → break down → de-risk → ship. |
+| [`root-cause-analysis`](skills/root-cause-analysis/SKILL.md) | Evidence-driven RCA: reproduce → evidence → ranked hypotheses → cause behind the cause → proven fix → report. Guides for bugs, performance and production incidents. |
 | [`software-engineering`](skills/software-engineering/SKILL.md) | Universal engineering rules + architecture layers, with per-type guides: web, mobile, desktop, embedded/IoT, CLI/library, data/ML, games, distributed. |
 | [`token-economy`](skills/token-economy/SKILL.md) | Cut token/context usage: targeted search, partial reads, filtered output, batching, delegation. |
 
 ### Roadmap
 `memory` · `diagrams-mapping` · `visual-design` (escape generic AI aesthetics) ·
-`root-cause-analysis` · `codebase-analysis`
+`codebase-analysis`
 
 ## Install
 
