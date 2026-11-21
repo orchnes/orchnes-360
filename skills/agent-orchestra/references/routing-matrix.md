@@ -1,6 +1,6 @@
 # Routing matrix
 
-Tiers (see also `autonomous-loop` model tiers): **T1** top-ranked · **T2** strong mid-cost · **T3** small/free/local.
+Tiers — always written T1/T2/T3; task ids are written TASK-n to avoid confusion (see also `autonomous-loop` model tiers): **T1** top-ranked · **T2** strong mid-cost · **T3** small/free/local.
 Rankings change — check a current leaderboard (LMArena, Artificial Analysis, SWE-bench, domain benchmarks) and your own acceptance-rate data.
 
 ## Score the task (1 = low, 3 = high)

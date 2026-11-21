@@ -38,7 +38,9 @@ output format, size budget, scope, deadline/budget. **No contract, no dispatch.*
 1. Automated checks first: tests, linters, type checks, schema validation, link/claim checks.
 2. Then review against the contract: correct, complete, within scope, **no bloat**, evidence for claims.
 3. Verdict: `ACCEPT` / `REVISE` (specific, actionable feedback) / `REASSIGN` (higher tier).
-4. Two `REVISE`s on the same task → reassign one tier up. Never accept "done" without evidence.
+4. **Escalation ladder:** first failure → `REVISE`, even when the output is badly wrong or bloated (the feedback is the lesson).
+   Second `REVISE` on the same task fails → `REASSIGN` one tier up. Immediate `REASSIGN` only if the task needs a capability the tier lacks (e.g. vision, long context).
+5. Never accept "done" without evidence; a claim without output counts as a failure.
 
 ### Minimalism rule (10 lines must not become 100)
 Before building, the specialist checks: existing code in the repo, standard library, a well-maintained dependency, a simpler design.

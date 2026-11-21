@@ -19,7 +19,7 @@ Last updated: 2026-11-21
 3. ...
 
 ## Common mistakes seen
-- (T7, 2026-11-21) rounded per line item → totals off by 1 cent
+- (TASK-7, 2026-11-21) rounded per line item → totals off by 1 cent
 ```
 
 ## Lifecycle
