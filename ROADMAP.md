@@ -23,7 +23,7 @@ Skills are the runtime's brain; the runtime is what makes them run continuously.
 | `memory` | persistent decisions and progress; resume instead of restarting | ✅ |
 | `token-economy` | minimal context and output | ✅ |
 | `autonomous-loop` | worker/supervisor loop with hard stops | ✅ |
-| `agent-orchestra` | split work across agents/models by measured cost and capability; review and teach weaker models; document decisions | ⏳ |
+| `agent-orchestra` | split work across agents/models by measured cost and capability; review and teach weaker models; document decisions | ✅ |
 | `guided-discovery` | router: user states a goal → full map of what's needed, plain-language explanations, ≤3 decisions with recommended defaults, sector packs | ✅ |
 
 ### Journey (idea → operation)

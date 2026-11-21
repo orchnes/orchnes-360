@@ -11,6 +11,7 @@ model's context until the skill is needed, so installing many skills costs almos
 | Skill | What it does |
 |---|---|
 | [`agent-behavior`](skills/agent-behavior/SKILL.md) | Baseline for every session: short, evidence-backed, human answers; no false "done", no loops, no restarting; ask only for secrets, approvals and real decisions. |
+| [`agent-orchestra`](skills/agent-orchestra/SKILL.md) | Run a team of agents: a top model decomposes, routes each task to the cheapest capable (free/local first) model, reviews against contracts, rejects bloat, teaches with playbooks, logs decisions and cost. |
 | [`autonomous-loop`](skills/autonomous-loop/SKILL.md) | Goal-driven loop: a cheap worker model iterates, a top-ranked supervisor model only diagnoses, shows correct patterns, designs tests and signs off. Built-in stall detection and hard stops. |
 | [`codebase-analysis`](skills/codebase-analysis/SKILL.md) | Analyze any repo end to end: architecture map, quality & tech debt, security review, onboarding guide — cheap recon first, every finding with file:line evidence. |
 | [`guided-discovery`](skills/guided-discovery/SKILL.md) | Say a goal, get the whole map instantly: every component in plain language, who does it, ≤ 3 decisions with defaults — then the agent drives. Packs: e-commerce, healthcare, SaaS + universal map for any sector. |
