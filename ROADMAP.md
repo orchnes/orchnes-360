@@ -52,7 +52,7 @@ Skills are the runtime's brain; the runtime is what makes them run continuously.
 | `content-social` | content creation, scheduling, community management via official APIs | ✅ |
 | `analysis` | markets, crypto, health data — informational, sourced, risk-flagged | ⏳ |
 | `daily-assistant` | everyday tasks | ⏳ |
-| `diagrams-mapping` | diagrams and system maps | ⏳ |
+| `diagrams-mapping` | diagrams and system maps | ✅ |
 
 ## Principles
 1. **Evidence or it didn't happen.** Claims of completion include proof (output, test, link).
