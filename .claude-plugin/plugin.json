@@ -1,0 +1,7 @@
+{
+  "name": "agent-skills",
+  "version": "0.1.0",
+  "description": "Portable, token-efficient agent skills: autonomous worker/supervisor loop, end-to-end planning, token economy, and more.",
+  "license": "MIT",
+  "keywords": ["skills", "agents", "planning", "autonomous", "token-efficiency"]
+}
