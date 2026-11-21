@@ -32,7 +32,7 @@ Skills are the runtime's brain; the runtime is what makes them run continuously.
 | 1 | `market-research` | market research, competitor benchmarking, risk analysis, business model, unit economics | ⏳ |
 | 2 | `company-setup` | entity type by growth plan, regional law (KVKK, GDPR, CCPA, …), tax/VAT, e-invoicing, consumer law; human-approval items | ⏳ |
 | 3 | `brand-ip` | trademark, patent, domain, legal scope | ⏳ |
-| 4 | `visual-design` | logo → presentation templates, colour trends, local (GPU) / cloud / free tools, escaping generic AI aesthetics | ⏳ |
+| 4 | `visual-design` | logo → presentation templates, colour trends, local (GPU) / cloud / free tools, escaping generic AI aesthetics | ✅ |
 | 5 | `product-build` | e-commerce, platforms, apps; roles (BA, DB analyst, full stack, QA, admin); test layers; Rust-first | ⏳ |
 | 6 | `commerce-integrations` | payment providers by country/continent, marketplaces, shipping, invoicing | ⏳ |
 | 7 | `infrastructure-planning` | DB admin/security/backup/tiers/failover, local+cloud tiering, capacity, VPS/VDS/SaaS, scaling, automation | ⏳ |

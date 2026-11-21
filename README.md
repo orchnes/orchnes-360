@@ -21,6 +21,7 @@ model's context until the skill is needed, so installing many skills costs almos
 | [`research`](skills/research/SKILL.md) | Evidence-based research: asks for access when missing, searches globally in local languages, primary sources first, cross-checks key claims, reports conflicts, answers with cited, dated evidence and confidence. |
 | [`root-cause-analysis`](skills/root-cause-analysis/SKILL.md) | Evidence-driven RCA: reproduce → evidence → ranked hypotheses → cause behind the cause → proven fix → report. Guides for bugs, performance and production incidents. |
 | [`software-engineering`](skills/software-engineering/SKILL.md) | Universal engineering rules + architecture layers, with per-type guides: web, mobile, desktop, embedded/IoT, CLI/library, data/ML, games, distributed. |
+| [`visual-design`](skills/visual-design/SKILL.md) | Original design that escapes generic AI looks: identity (logo, colour, type), brand guide, templates, UI/UX on proven design systems, tool paths for local GPU, cloud or free software; reference sites adapted only within licences. |
 | [`workflow-automation`](skills/workflow-automation/SKILL.md) | Automations from plain language: short interview → spec → right platform (free/self-hosted first, or code) → built with idempotency, retries, alerts and approval steps → tested → runbook. |
 | [`token-economy`](skills/token-economy/SKILL.md) | Cut token/context usage: targeted search, partial reads, filtered output, batching, delegation. |
 
