@@ -15,6 +15,9 @@ Last reviewed: 2026-11-21 — verify carriers' services/APIs and all tax rules w
 HS codes on products · commercial invoice data via label APIs · Incoterms: DAP (buyer pays duties on delivery) vs **DDP** (you collect duties at checkout — better conversion) ·
 EU IOSS for low-value imports · restricted/prohibited items per destination · customs-friendly product descriptions · landed-cost calculation at checkout.
 
+**Product compliance in the destination market** (verify per product): EU General Product Safety Regulation (EU responsible person, labelling), CE marking where applicable,
+food-contact material rules for tableware/kitchenware, packaging and WEEE/battery registrations (e.g. Germany's LUCID), local-language legal pages (imprint, withdrawal terms, privacy).
+
 ## Invoicing and e-invoicing
 - **Türkiye:** e-Fatura (B2B between registered taxpayers) / e-Arşiv Fatura (B2C), typically through a GİB-authorized private integrator (özel entegratör) or GİB portal; e-İrsaliye for dispatch where required; obligations depend on turnover/sector thresholds — accountant confirms.
 - **EU:** VAT invoices with required fields; growing e-invoicing mandates (e.g. Italy SDI, France and Belgium rollouts, ViDA reforms) — check the country.
