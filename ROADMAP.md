@@ -47,7 +47,7 @@ Skills are the runtime's brain; the runtime is what makes them run continuously.
 | `root-cause-analysis` | bugs, performance, incidents | ✅ |
 | `codebase-analysis` | architecture, quality, security, onboarding | ✅ |
 | `planner` | end-to-end planning | ✅ |
-| `research` | permissioned web research, consistent conclusions with sources | ⏳ |
+| `research` | permissioned web research, consistent conclusions with sources | ✅ |
 | `workflow-automation` | automations designed from a few user answers (n8n/Power Automate-class and beyond) | ⏳ |
 | `content-social` | content creation, scheduling, community management via official APIs | ⏳ |
 | `analysis` | markets, crypto, health data — informational, sourced, risk-flagged | ⏳ |
