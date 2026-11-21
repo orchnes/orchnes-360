@@ -31,7 +31,7 @@ Use this shape:
 THE MAP
 1. <Component> — <plain one-line explanation / analogy> — <who: AI does it | needs your approval | needs a professional>
 2. ...
-(8–12 top-level items, in the order they should happen)
+(8–12 top-level items in the order they should happen; merge related pack rows to stay within this)
 
 3 DECISIONS TO START  (my recommendation in bold)
 - <Question>? **<default>** / <alternative>
@@ -59,7 +59,7 @@ Options (free/open first):   | option | cost | effort | fits when |
 My recommendation: ... because ...
 I'll do: ...            You do / approve: ...
 Done when: <checkable result>
-Hand-off: <skill to use, e.g. visual-design, company-setup, infrastructure-planning>
+Hand-off: <skill name exactly as listed in references/universal-map.md>
 ```
 
 ## 4. Depth on demand
@@ -68,7 +68,7 @@ Hand-off: <skill to use, e.g. visual-design, company-setup, infrastructure-plann
 - Expert → skip analogies, give specs, trade-offs, numbers.
 
 ## 5. Facts that go stale
-Laws, taxes, fees, provider availability per country and prices change. Sector packs list *what to check*, not final answers:
+Laws, taxes, fees, provider availability per country and prices change. Any number (price, budget, fee, timeline) not verified in this session is labelled `~estimate`. Sector packs list *what to check*, not final answers:
 verify against current official sources before giving specifics, cite them, and add the date checked.
 Legal, tax, medical and financial items end with preparation + "confirm with a qualified professional" where stakes are high.
 
