@@ -37,7 +37,7 @@ Skills are the runtime's brain; the runtime is what makes them run continuously.
 | 6 | `commerce-integrations` | payment providers by country/continent, marketplaces, shipping, invoicing | ✅ |
 | 7 | `infrastructure-planning` | DB admin/security/backup/tiers/failover, local+cloud tiering, capacity, VPS/VDS/SaaS, scaling, automation | ✅ |
 | 8 | `security-operations` | injection/SQLi detection, CVE analysis, cloud, mail (SPF/DKIM/DMARC), social accounts, password policy, kernel hardening, incident response | ✅ |
-| 9 | `growth-operations` | CRM, SEO, i18n, customer support | ⏳ |
+| 9 | `growth-operations` | CRM, SEO, i18n, customer support | ✅ |
 | 10 | `ai-integration` | LLM/SLM, grounded on the platform (RAG), refuses off-scope, privacy-respecting customer analytics | ✅ |
 
 ### Capabilities
