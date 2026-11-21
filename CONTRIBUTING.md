@@ -7,7 +7,8 @@
 4. Keep `SKILL.md` lean (target < 200 lines). Put long material in `skills/<your-skill>/references/`
    and reference it by relative path.
 5. Run `python scripts/validate.py`.
-6. Add the skill to the table in `README.md`.
+6. Add eval scenarios in `evals/<your-skill>.md` (prompts + pass checks).
+7. Add the skill to the table in `README.md` and update `ROADMAP.md`.
 
 ## Quality bar
 - Procedures end in a verifiable outcome.
