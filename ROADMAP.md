@@ -34,7 +34,7 @@ Skills are the runtime's brain; the runtime is what makes them run continuously.
 | 3 | `brand-ip` | trademark, patent, domain, legal scope | ⏳ |
 | 4 | `visual-design` | logo → presentation templates, colour trends, local (GPU) / cloud / free tools, escaping generic AI aesthetics | ✅ |
 | 5 | `product-build` | e-commerce, platforms, apps; roles (BA, DB analyst, full stack, QA, admin); test layers; Rust-first | ✅ |
-| 6 | `commerce-integrations` | payment providers by country/continent, marketplaces, shipping, invoicing | ⏳ |
+| 6 | `commerce-integrations` | payment providers by country/continent, marketplaces, shipping, invoicing | ✅ |
 | 7 | `infrastructure-planning` | DB admin/security/backup/tiers/failover, local+cloud tiering, capacity, VPS/VDS/SaaS, scaling, automation | ✅ |
 | 8 | `security-operations` | injection/SQLi detection, CVE analysis, cloud, mail (SPF/DKIM/DMARC), social accounts, password policy, kernel hardening, incident response | ✅ |
 | 9 | `growth-operations` | CRM, SEO, i18n, customer support | ⏳ |
