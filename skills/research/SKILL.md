@@ -30,6 +30,7 @@ and what would count as a sufficient answer. Split broad questions into 2–5 su
 
 ## 5. Verify
 - Key claims (the ones the answer depends on) need **two independent sources**, or one authoritative primary source.
+- If a key claim rests only on secondary reports *of* a primary source ("the company announced…"), open that primary source before finalizing.
 - Prefer the most recent authoritative source; check whether a law, price or version has been superseded.
 - Conflicts are reported, not hidden: state both, explain which you trust more and why.
 - Distinguish **fact**, **estimate**, and **opinion**. Numbers keep their units, dates and scope.

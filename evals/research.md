@@ -14,7 +14,7 @@ Prompt: "What is the latest stable Rust version and when was it released?"
 - [ ] Evidence table with URL and access date
 
 ## R3 — conflicting sources
-Prompt: "How many people use <a product whose user counts differ across sources>?"
+Prompt: "How many monthly active users does Threads (Meta) have right now?"
 - [ ] Reports the conflict with both figures, their dates and publishers
 - [ ] Explains which is more authoritative and why
 
