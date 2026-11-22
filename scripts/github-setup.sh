@@ -22,11 +22,19 @@ command -v gh >/dev/null || { echo "GitHub CLI (gh) is not installed: https://cl
 login=$(gh api user --jq .login)
 role=$(gh api "orgs/$ORG/memberships/$login" --jq .role 2>/dev/null || true)
 [ "$role" = "admin" ] || { echo "'$login' is not an owner of $ORG. Run: gh auth login (choose the owner account)"; exit 1; }
+scopes=$(gh api -i user 2>/dev/null | tr -d '\r' | sed -n 's/^[Xx]-[Oo][Aa]uth-[Ss]copes: //p')
+# Classic/OAuth tokens list their scopes; fine-grained tokens send none, so only check when present.
+case ", $scopes," in
+  ", ,"|*", admin:org,"*) ;;
+  *) echo "The gh token lacks the admin:org scope (has: $scopes). Run: gh auth refresh -h github.com -s admin:org"; exit 1 ;;
+esac
 
 ok()   { echo "  ✔ $1"; }
 warn() { echo "  ⚠ $1"; }
-put()  { gh api --method PUT "$1" --silent 2>/dev/null && ok "$2" || warn "$2 (failed — set it in the web UI)"; }
-json() { gh api --method "$1" "$2" --input - --silent 2>/dev/null && ok "$3" || warn "$3 (failed — set it in the web UI)"; }
+# On failure, show GitHub's own error message so the cause is visible (missing scope, plan, typo...).
+fail() { warn "$1 (failed — set it in the web UI)"; [ -n "$2" ] && printf '%s\n' "$2" | grep -E '"message"|^gh:' | sed 's/^/      /' || true; }
+put()  { local err; err=$(gh api --method PUT "$1" 2>&1 >/dev/null) && ok "$2" || fail "$2" "$err"; }
+json() { local body err; body=$(cat); err=$(gh api --method "$1" "$2" --input - <<<"$body" 2>&1 >/dev/null) && ok "$3" || fail "$3" "$err"; }
 
 # ---------------------------------------------------------------- 1. organization
 echo "== organization $ORG"
@@ -53,20 +61,35 @@ json PUT "orgs/$ORG/actions/permissions/workflow" "Workflow token: read-only, ca
 # Code security defaults for every repo (current and new). CodeQL "default setup" is left alone on
 # purpose: each repo runs its own CodeQL workflow, and default setup would conflict with it.
 CFG_NAME="Orchnes secure defaults"
-cfg_id=$(gh api "orgs/$ORG/code-security/configurations" --jq ".[] | select(.name==\"$CFG_NAME\") | .id" 2>/dev/null || true)
-if [ -z "$cfg_id" ]; then
-  base='"name": "'"$CFG_NAME"'", "description": "Dependabot, secret scanning + push protection, private vulnerability reporting",
-        "dependency_graph": "enabled", "dependabot_alerts": "enabled", "dependabot_security_updates": "enabled",
-        "secret_scanning": "enabled", "secret_scanning_push_protection": "enabled",
-        "private_vulnerability_reporting": "enabled", "code_scanning_default_setup": "not_set", "enforcement": "enforced"'
-  # Try with the extra secret-scanning checks first; fall back if the plan does not offer them.
-  cfg_id=$(gh api --method POST "orgs/$ORG/code-security/configurations" --input - --jq .id 2>/dev/null <<<"{$base,
-             \"secret_scanning_validity_checks\": \"enabled\", \"secret_scanning_non_provider_patterns\": \"enabled\"}" \
-        || gh api --method POST "orgs/$ORG/code-security/configurations" --input - --jq .id 2>/dev/null <<<"{$base}" \
-        || true)
-  [ -n "$cfg_id" ] && ok "code security configuration '$CFG_NAME' created" || warn "code security configuration (failed)"
+is_id() { [[ "$1" =~ ^[0-9]+$ ]]; }
+json_id() { grep -o '"id": *[0-9]*' <<<"$1" | head -1 | grep -o '[0-9]*$' || true; }
+# Reuse the organization's current default configuration if there is one (for example one made in
+# the web UI); otherwise look for ours by name; otherwise create it.
+cfg_id=$(gh api "orgs/$ORG/code-security/configurations/defaults" \
+           --jq '[.[] | select(.configuration.target_type=="organization") | .configuration.id][0] // empty' 2>/dev/null || true)
+if is_id "$cfg_id"; then
+  ok "code security: reusing the organization's default configuration (id $cfg_id)"
 else
-  ok "code security configuration '$CFG_NAME' already exists"
+  cfg_id=$(gh api "orgs/$ORG/code-security/configurations" --jq ".[] | select(.name==\"$CFG_NAME\") | .id" 2>/dev/null | head -1 || true)
+  if is_id "$cfg_id"; then
+    ok "code security configuration '$CFG_NAME' already exists (id $cfg_id)"
+  else
+    base='"name": "'"$CFG_NAME"'", "description": "Dependabot, secret scanning + push protection, private vulnerability reporting",
+          "dependency_graph": "enabled", "dependabot_alerts": "enabled", "dependabot_security_updates": "enabled",
+          "secret_scanning": "enabled", "secret_scanning_push_protection": "enabled",
+          "private_vulnerability_reporting": "enabled", "code_scanning_default_setup": "not_set", "enforcement": "enforced"'
+    # Try with the extra secret-scanning checks first; fall back if the plan does not offer them.
+    # Only a numeric id counts as success: on an HTTP error gh still prints the error body to stdout.
+    out=$(gh api --method POST "orgs/$ORG/code-security/configurations" --input - 2>&1 <<<"{$base,
+               \"secret_scanning_validity_checks\": \"enabled\", \"secret_scanning_non_provider_patterns\": \"enabled\"}" || true)
+    cfg_id=$(json_id "$out")
+    if ! is_id "$cfg_id"; then
+      out=$(gh api --method POST "orgs/$ORG/code-security/configurations" --input - 2>&1 <<<"{$base}" || true)
+      cfg_id=$(json_id "$out")
+    fi
+    if is_id "$cfg_id"; then ok "code security configuration '$CFG_NAME' created (id $cfg_id)"
+    else fail "code security configuration '$CFG_NAME'" "$out"; cfg_id=""; fi
+  fi
 fi
 
 # ---------------------------------------------------------------- 2. profile README
@@ -118,7 +141,7 @@ for repo in "${REPOS[@]}"; do
   fi
 done
 
-[ -n "${cfg_id:-}" ] && {
+is_id "${cfg_id:-}" && {
   json POST "orgs/$ORG/code-security/configurations/$cfg_id/attach" "security defaults attached to all repos" <<<'{"scope": "all"}'
   json PUT "orgs/$ORG/code-security/configurations/$cfg_id/defaults" "security defaults applied to new repos" <<<'{"default_for_new_repos": "all"}'
 }

@@ -5,6 +5,8 @@ All notable changes to Orchnes 360 are documented here. Versions follow [Semanti
 ## [Unreleased]
 ### Changed
 - Repository moved to the `orchnesai` organization: links, badges and install commands now use `github.com/orchnesai/...` (old `github.com/orchnes/...` links redirect).
+### Fixed
+- `scripts/github-setup.sh` now prints GitHub's error message when a step fails, stops early if the `gh` token lacks the `admin:org` scope, reuses the organization's existing default code security configuration, and no longer reports a configuration as "created" when the API call failed.
 
 ## [0.3.0] — 2026-11-22
 ### Added
