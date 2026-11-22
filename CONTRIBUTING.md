@@ -21,9 +21,9 @@ Thanks for helping! Please read the [code of conduct](CODE_OF_CONDUCT.md). Secur
 Small, focused PRs. One skill per PR when adding new skills.
 
 ## Maintainers: GitHub settings as code
-`scripts/github-setup.sh` applies the repository settings for `orchnes/orchnes-360` and `orchnes/orchnes-cli`
-(security features, Actions permissions, `main` ruleset, topics, releases). Run it with the GitHub CLI signed in as `orchnes`:
+`scripts/github-setup.sh` applies the `orchnesai` organization settings and the repository settings for `orchnesai/orchnes-360` and `orchnesai/orchnes-cli`
+(org defaults, profile README, repo transfer, security features, Actions permissions, `main` ruleset, topics). Run it with the GitHub CLI signed in as the org owner:
 ```bash
-gh api repos/orchnes/orchnes-360/contents/scripts/github-setup.sh -H "Accept: application/vnd.github.raw" > github-setup.sh
+gh api repos/orchnesai/orchnes-360/contents/scripts/github-setup.sh -H "Accept: application/vnd.github.raw" > github-setup.sh
 bash github-setup.sh
 ```

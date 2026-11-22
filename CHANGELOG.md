@@ -2,6 +2,10 @@
 
 All notable changes to Orchnes 360 are documented here. Versions follow [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+### Changed
+- Repository moved to the `orchnesai` organization: links, badges and install commands now use `github.com/orchnesai/...` (old `github.com/orchnes/...` links redirect).
+
 ## [0.3.0] — 2026-11-22
 ### Added
 - Project renamed to **Orchnes 360**; Claude Code plugin and marketplace name `orchnes-360`.

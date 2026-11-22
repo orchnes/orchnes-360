@@ -4,10 +4,10 @@
   "description": "26 portable, token-efficient agent skills: guided discovery from idea to operation (market, company, brand, design, product, commerce, infrastructure, security, growth, AI) plus agent behavior, memory, orchestration, research, analysis and automation — each tested with evals.",
   "author": {
     "name": "Ömer Faruk Alibal",
-    "url": "https://github.com/orchnes"
+    "url": "https://github.com/orchnesai"
   },
-  "homepage": "https://github.com/orchnes/orchnes-360",
-  "repository": "https://github.com/orchnes/orchnes-360",
+  "homepage": "https://github.com/orchnesai/orchnes-360",
+  "repository": "https://github.com/orchnesai/orchnes-360",
   "license": "MIT",
   "keywords": [
     "agent-skills",
