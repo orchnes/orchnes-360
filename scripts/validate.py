@@ -42,6 +42,10 @@ def check(skill_dir: Path) -> list[str]:
         errors.append(f"{skill_dir.name}: description empty or > 1024 chars ({len(desc)})")
     if len(text.splitlines()) > MAX_LINES:
         errors.append(f"{skill_dir.name}: SKILL.md over {MAX_LINES} lines")
+    if not (ROOT / "evals" / f"{skill_dir.name}.md").exists():
+        errors.append(f"{skill_dir.name}: missing evals/{skill_dir.name}.md")
+    if f"skills/{skill_dir.name}/SKILL.md" not in (ROOT / "README.md").read_text(encoding="utf-8"):
+        errors.append(f"{skill_dir.name}: not listed in README.md")
     for ref in re.findall(r"`(references/[^`]+)`", text):
         if not (skill_dir / ref).exists():
             errors.append(f"{skill_dir.name}: referenced file missing: {ref}")

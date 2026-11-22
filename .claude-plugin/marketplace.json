@@ -1,11 +1,13 @@
 {
   "name": "agent-skills",
-  "owner": { "name": "<OWNER>" },
+  "owner": {
+    "name": "<OWNER>"
+  },
   "plugins": [
     {
       "name": "agent-skills",
       "source": "./",
-      "description": "Portable, token-efficient agent skills: autonomous worker/supervisor loop, end-to-end planning, token economy, and more."
+      "description": "26 portable, token-efficient agent skills: guided discovery from idea to operation (market, company, brand, design, product, commerce, infrastructure, security, growth, AI) plus agent behavior, memory, orchestration, research, analysis and automation — each tested with evals."
     }
   ]
 }
