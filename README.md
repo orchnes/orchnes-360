@@ -2,7 +2,7 @@
 
 # Orchnes 360
 
-[![validate](https://github.com/orchnes/orchnes-360/actions/workflows/validate.yml/badge.svg)](https://github.com/orchnes/orchnes-360/actions/workflows/validate.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-spec%20compliant-6f42c1)](https://agentskills.io) ![skills](https://img.shields.io/badge/skills-26-success)
+[![validate](https://github.com/orchnesai/orchnes-360/actions/workflows/validate.yml/badge.svg)](https://github.com/orchnesai/orchnes-360/actions/workflows/validate.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-spec%20compliant-6f42c1)](https://agentskills.io) ![skills](https://img.shields.io/badge/skills-26-success)
 
 **End-to-end skills for AI agents — from idea to a running business, in any AI tool.**
 Say what you want to achieve; your agents get the whole map, do the work, and ask you only for decisions and approvals.
@@ -55,7 +55,7 @@ Full, sourced matrix: [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md) (verified 2
 ### Quickest: one folder for most agents
 Copy the skill folders into **`.agents/skills/`** — read by **OpenAI Codex, Cursor, GitHub Copilot, Gemini CLI and Windsurf**:
 ```bash
-git clone https://github.com/orchnes/orchnes-360
+git clone https://github.com/orchnesai/orchnes-360
 mkdir -p .agents/skills && cp -r orchnes-360/skills/* .agents/skills/
 ```
 For all your projects use `~/.agents/skills/` instead.
@@ -63,7 +63,7 @@ For all your projects use `~/.agents/skills/` instead.
 ### Claude Code
 Plugin (recommended):
 ```
-/plugin marketplace add orchnes/orchnes-360
+/plugin marketplace add orchnesai/orchnes-360
 /plugin install orchnes-360@orchnes-360
 ```
 Or copy folders to `.claude/skills/` (project) or `~/.claude/skills/` (all projects). Cline also reads `.claude/skills/`.
@@ -87,7 +87,7 @@ Zip a skill folder (folder name = skill name) and upload: Customize → Skills �
 
 ### Tools without skills support (Aider, Continue, ChatGPT chat, any LLM API)
 Use the instruction-file fallbacks in [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md): `AGENTS.md`, `CONVENTIONS.md` (Aider), `.continue/rules/`,
-custom/project instructions (ChatGPT), or the system prompt (API). The [`orchnes`](https://github.com/orchnes/orchnes-cli) CLI (Rust, companion repo) installs skills and generates these files for you.
+custom/project instructions (ChatGPT), or the system prompt (API). The [`orchnes`](https://github.com/orchnesai/orchnes-cli) CLI (Rust, companion repo) installs skills and generates these files for you.
 
 ## Design principles
 1. **One skill, one job.** Focused descriptions trigger reliably.
@@ -99,4 +99,4 @@ custom/project instructions (ChatGPT), or the system prompt (API). The [`orchnes
 See [CONTRIBUTING.md](CONTRIBUTING.md), the [code of conduct](CODE_OF_CONDUCT.md) and the [security policy](SECURITY.md). Changes are listed in [CHANGELOG.md](CHANGELOG.md). Run `python scripts/validate.py` before opening a PR.
 
 ## License
-[MIT](LICENSE) © Ömer Faruk Alibal · [Orchnes](https://github.com/orchnes)
+[MIT](LICENSE) © Ömer Faruk Alibal · [Orchnes](https://github.com/orchnesai)
