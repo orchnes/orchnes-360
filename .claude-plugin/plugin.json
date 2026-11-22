@@ -1,13 +1,23 @@
 {
-  "name": "agent-skills",
-  "version": "0.2.0",
+  "name": "orchnes-360",
+  "version": "0.3.0",
   "description": "26 portable, token-efficient agent skills: guided discovery from idea to operation (market, company, brand, design, product, commerce, infrastructure, security, growth, AI) plus agent behavior, memory, orchestration, research, analysis and automation — each tested with evals.",
+  "author": {
+    "name": "Ömer Faruk Alibal",
+    "url": "https://github.com/orchnes"
+  },
+  "homepage": "https://github.com/orchnes/orchnes-360",
+  "repository": "https://github.com/orchnes/orchnes-360",
   "license": "MIT",
   "keywords": [
-    "skills",
-    "agents",
+    "agent-skills",
+    "ai-agents",
+    "claude-code",
+    "codex",
+    "orchestration",
     "planning",
-    "autonomous",
+    "security",
+    "e-commerce",
     "token-efficiency"
   ]
 }

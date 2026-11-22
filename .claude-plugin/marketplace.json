@@ -1,11 +1,12 @@
 {
-  "name": "agent-skills",
+  "name": "orchnes-360",
   "owner": {
-    "name": "<OWNER>"
+    "name": "Ömer Faruk Alibal",
+    "url": "https://github.com/orchnes"
   },
   "plugins": [
     {
-      "name": "agent-skills",
+      "name": "orchnes-360",
       "source": "./",
       "description": "26 portable, token-efficient agent skills: guided discovery from idea to operation (market, company, brand, design, product, commerce, infrastructure, security, growth, AI) plus agent behavior, memory, orchestration, research, analysis and automation — each tested with evals."
     }

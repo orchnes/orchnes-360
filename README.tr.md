@@ -1,6 +1,11 @@
 🇬🇧 [English](README.md) · 🇹🇷 Türkçe
 
-# agent-skills
+# Orchnes 360
+
+[![validate](https://github.com/orchnes/orchnes-360/actions/workflows/validate.yml/badge.svg)](https://github.com/orchnes/orchnes-360/actions/workflows/validate.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-spec%20compliant-6f42c1)](https://agentskills.io) ![skills](https://img.shields.io/badge/skills-26-success)
+
+**Yapay zekâ ajanları için uçtan uca skill'ler: fikirden çalışan bir işletmeye kadar, hangi yapay zekâ aracını kullanırsan kullan.**
+Ne istediğini söylemen yeterli; ajanlar tüm yol haritasını çıkarır, işi yürütür ve senden yalnızca karar ve onay ister.
 
 Yapay zekâ ajanları için taşınabilir, token tasarruflu skill'ler (beceri paketleri). MIT lisanslıdır.
 
@@ -50,16 +55,16 @@ Kaynaklı ve tam uyumluluk tablosu: [docs/COMPATIBILITY.md](docs/COMPATIBILITY.m
 ### En kolayı: çoğu ajan için tek klasör
 Skill klasörleri **`.agents/skills/`** altına kopyalanır. Bu klasörü **OpenAI Codex, Cursor, GitHub Copilot, Gemini CLI ve Windsurf** okur:
 ```bash
-git clone https://github.com/<OWNER>/agent-skills
-mkdir -p .agents/skills && cp -r agent-skills/skills/* .agents/skills/
+git clone https://github.com/orchnes/orchnes-360
+mkdir -p .agents/skills && cp -r orchnes-360/skills/* .agents/skills/
 ```
 Tüm projelerde kullanmak için bunun yerine `~/.agents/skills/` kullanılır.
 
 ### Claude Code
 Plugin (önerilen):
 ```
-/plugin marketplace add <OWNER>/agent-skills
-/plugin install agent-skills@agent-skills
+/plugin marketplace add orchnes/orchnes-360
+/plugin install orchnes-360@orchnes-360
 ```
 Ya da klasörler `.claude/skills/` (proje) veya `~/.claude/skills/` (tüm projeler) altına kopyalanır. Cline de `.claude/skills/` klasörünü okur.
 
@@ -82,7 +87,7 @@ Skill klasörü zip'lenip (klasör adı = skill adı) yüklenir: Customize → S
 
 ### Skill desteği olmayan araçlar (Aider, Continue, ChatGPT sohbeti, herhangi bir LLM API'si)
 [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md) (İngilizce) içindeki talimat dosyası alternatifleri kullanılır: `AGENTS.md`, `CONVENTIONS.md` (Aider), `.continue/rules/`,
-özel/proje talimatları (ChatGPT) veya sistem prompt'u (API). `skillctl` CLI'ı (Rust, ayrı repo) bu dosyaları üretebilir.
+özel/proje talimatları (ChatGPT) veya sistem prompt'u (API). [`orchnes`](https://github.com/orchnes/orchnes-cli) CLI'ı (Rust, ayrı repo) skill'leri kurar ve bu dosyaları senin için üretir.
 
 ## Tasarım ilkeleri
 1. **Bir skill, bir iş.** Odaklı açıklamalar güvenilir şekilde tetiklenir.
@@ -94,4 +99,4 @@ Skill klasörü zip'lenip (klasör adı = skill adı) yüklenir: Customize → S
 Ayrıntılar [CONTRIBUTING.md](CONTRIBUTING.md) (İngilizce) dosyasında. PR açmadan önce `python scripts/validate.py` çalıştırılmalıdır.
 
 ## Lisans
-[MIT](LICENSE) (İngilizce)
+[MIT](LICENSE) (İngilizce) © Ömer Faruk Alibal · [Orchnes](https://github.com/orchnes)

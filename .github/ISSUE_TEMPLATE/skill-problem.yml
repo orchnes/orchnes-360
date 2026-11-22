@@ -1,0 +1,36 @@
+name: Skill problem
+description: A skill produced wrong, outdated, unsafe or low-quality agent behaviour
+labels: ["skill-problem"]
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill
+      placeholder: e.g. commerce-integrations
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Prompt or scenario
+      description: What you asked the agent (remove any personal data or secrets).
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What the agent did
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What it should have done
+      description: If a fact is outdated, link the official source and its date.
+    validations:
+      required: true
+  - type: input
+    id: agent
+    attributes:
+      label: Agent and model
+      placeholder: e.g. Codex CLI + <model>, Claude Code + claude-sonnet-5-5, Cursor

@@ -1,0 +1,30 @@
+name: New skill or sector pack
+description: Propose a new skill, or a new sector/region guide for an existing skill
+labels: ["new-skill"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Proposed name
+      description: lowercase-with-hyphens, 1–64 characters
+    validations:
+      required: true
+  - type: textarea
+    id: job
+    attributes:
+      label: The one job it does
+      description: One skill, one job. What will users say when they need it?
+    validations:
+      required: true
+  - type: textarea
+    id: overlap
+    attributes:
+      label: Overlap with existing skills
+      description: Which existing skills come closest, and why they are not enough.
+  - type: textarea
+    id: evals
+    attributes:
+      label: Two or more test prompts
+      description: Realistic prompts and what a good answer must contain (these become evals).
+    validations:
+      required: true

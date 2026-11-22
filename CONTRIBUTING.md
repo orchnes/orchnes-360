@@ -1,4 +1,6 @@
-# Contributing
+# Contributing to Orchnes 360
+
+Thanks for helping! Please read the [code of conduct](CODE_OF_CONDUCT.md). Security issues go through [SECURITY.md](SECURITY.md), not public issues.
 
 ## Add a skill
 1. Copy `templates/SKILL.template.md` to `skills/<your-skill>/SKILL.md`.

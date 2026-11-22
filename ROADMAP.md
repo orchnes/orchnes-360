@@ -1,4 +1,4 @@
-# Roadmap
+# Orchnes 360 — Roadmap
 
 ## Vision
 Anyone, in any sector, should be able to say what they want to achieve and have AI agents take it
@@ -10,7 +10,7 @@ and approvals; agents do the rest, with evidence for every claim and a human gat
 | Layer | What | Status |
 |---|---|---|
 | **1. Knowledge layer** — this repo | Portable skills (Agent Skills format) usable by Claude, Codex and other agents | in progress |
-| **2. Runtime layer** — separate repo, Rust | Orchestrator: routes tasks across any model (hosted or local), paid models supervise free ones, 24/7 runs, agent-to-agent messaging, notifications, audit log, budgets, one-command install | MVP: `skillctl` (load, validate, route, export to 9 formats, install for 8 agents) + model gateway (OpenAI-compatible + Anthropic, tier fallback, sensitive → local/compliant only, cost, run log); review loop, scheduling next |
+| **2. Runtime layer** — [orchnes-cli](https://github.com/orchnes/orchnes-cli), Rust | Orchestrator: routes tasks across any model (hosted or local), paid models supervise free ones, 24/7 runs, agent-to-agent messaging, notifications, audit log, budgets, one-command install | MVP: [`orchnes`](https://github.com/orchnes/orchnes-cli) CLI (load, validate, route, export to 9 formats, install for 8 agents) + model gateway (OpenAI-compatible + Anthropic, tier fallback, sensitive → local/compliant only, cost, run log); review loop, scheduling next |
 
 Skills are the runtime's brain; the runtime is what makes them run continuously.
 
