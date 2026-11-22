@@ -51,7 +51,7 @@ Skills are the runtime's brain; the runtime is what makes them run continuously.
 | `workflow-automation` | automations designed from a few user answers (n8n/Power Automate-class and beyond) | ✅ |
 | `content-social` | content creation, scheduling, community management via official APIs | ✅ |
 | `analysis` | markets, crypto, health data — informational, sourced, risk-flagged | ✅ |
-| `daily-assistant` | everyday tasks | ⏳ |
+| `daily-assistant` | everyday tasks | ✅ |
 | `diagrams-mapping` | diagrams and system maps | ✅ |
 
 ## Principles
