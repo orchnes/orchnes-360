@@ -96,7 +96,7 @@ Skill klasörü zip'lenip (klasör adı = skill adı) yüklenir: Customize → S
 4. **Sağlayıcıdan bağımsız.** Belirli bir model veya araca bağımlılık yok; araca özgü notlar `references/` içinde.
 
 ## Katkıda bulunma
-Ayrıntılar [CONTRIBUTING.md](CONTRIBUTING.md) (İngilizce) dosyasında. PR açmadan önce `python scripts/validate.py` çalıştırılmalıdır.
+Ayrıntılar [CONTRIBUTING.md](CONTRIBUTING.md) (İngilizce) dosyasında; ayrıca [davranış kuralları](CODE_OF_CONDUCT.md), [güvenlik politikası](SECURITY.md) ve [değişiklik günlüğü](CHANGELOG.md) (İngilizce). PR açmadan önce `python scripts/validate.py` çalıştırılmalıdır.
 
 ## Lisans
 [MIT](LICENSE) (İngilizce) © Ömer Faruk Alibal · [Orchnes](https://github.com/orchnes)
