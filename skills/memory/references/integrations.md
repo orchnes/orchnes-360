@@ -1,13 +1,15 @@
 # Tool integrations
 
-The `.memory/` files work everywhere because they are plain Markdown. What differs is which
+Verified 2026-11-22 (see docs/COMPATIBILITY.md in the repo). The `.memory/` files work everywhere because they are plain Markdown. What differs is which
 index file each tool loads automatically. Check your tool's current docs — locations change.
 
 | Tool | Auto-loaded index | Notes |
 |---|---|---|
-| Claude Code | `CLAUDE.md` (project root, also `~/.claude/CLAUDE.md` for all projects) | Can import other files with `@path`; may also keep its own auto-memory. |
-| Codex | `AGENTS.md` (project root and parent dirs; global file in the Codex home dir) | |
-| Other agents (Cursor, Copilot, Gemini CLI, Aider, …) | their rules/instructions file; many read `AGENTS.md` | Add one line pointing to `.memory/state.md`. |
+| Claude Code | `CLAUDE.md` or `.claude/CLAUDE.md` (project), `~/.claude/CLAUDE.md` (user) | Reads `AGENTS.md` only when no CLAUDE.md exists; otherwise put `@AGENTS.md` in CLAUDE.md. Auto-memory also exists. |
+| Codex | `AGENTS.md` per directory from repo root to CWD; global `~/.codex/AGENTS.md` (or `AGENTS.override.md`) | combined default limit 32 KiB |
+| Cursor, Copilot, Windsurf, Cline | read `AGENTS.md` natively | Add one line pointing to `.memory/state.md`. |
+| Gemini CLI | `GEMINI.md`; AGENTS.md via `settings.json` `context.fileName` | |
+| Aider | `CONVENTIONS.md` via `--read` | |
 | Chat apps (Claude.ai, ChatGPT, …) | project instructions / custom instructions | Paste the index; upload `state.md` to the project's knowledge. |
 
 ## Supporting several tools in one repo

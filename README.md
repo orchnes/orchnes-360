@@ -42,22 +42,45 @@ See [ROADMAP.md](ROADMAP.md) — vision, the full skill map (idea → company �
 
 ## Install
 
-### Claude Code (plugin)
+These are standard **Agent Skills** (agentskills.io spec), so most AI coding agents load them natively.
+Full, sourced matrix: [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md) (verified 2026-11-22).
+
+### Quickest: one folder for most agents
+Copy the skill folders into **`.agents/skills/`** — read by **OpenAI Codex, Cursor, GitHub Copilot, Gemini CLI and Windsurf**:
+```bash
+git clone https://github.com/<OWNER>/agent-skills
+mkdir -p .agents/skills && cp -r agent-skills/skills/* .agents/skills/
+```
+For all your projects use `~/.agents/skills/` instead.
+
+### Claude Code
+Plugin (recommended):
 ```
 /plugin marketplace add <OWNER>/agent-skills
 /plugin install agent-skills@agent-skills
 ```
+Or copy folders to `.claude/skills/` (project) or `~/.claude/skills/` (all projects). Cline also reads `.claude/skills/`.
 
-### Claude Code (single skills, no plugin)
-Copy any `skills/<name>/` folder to `~/.claude/skills/` (all projects) or `.claude/skills/` (one project).
+### OpenAI Codex
+Copy to `.agents/skills/` (project) or `~/.agents/skills/` (user). Invoke with `$skill-name`, `/skills`, or let Codex pick by description.
+Optional always-on baseline: put the `agent-behavior` rules in `AGENTS.md`.
+
+### Cursor · GitHub Copilot · Gemini CLI · Windsurf · Cline
+Native skills paths (project / user):
+| Tool | Project | User |
+|---|---|---|
+| Cursor | `.agents/skills/` or `.cursor/skills/` | `~/.agents/skills/` or `~/.cursor/skills/` |
+| GitHub Copilot | `.github/skills/` or `.agents/skills/` | `~/.copilot/skills/` or `~/.agents/skills/` |
+| Gemini CLI | `.gemini/skills/` or `.agents/skills/` (or `gemini skills install <repo-url> --consent`) | `~/.gemini/skills/` |
+| Windsurf | `.agents/skills/` or `.windsurf/skills/` | `~/.agents/skills/` |
+| Cline | `.cline/skills/` or `.claude/skills/` | `~/.cline/skills/` |
 
 ### Claude.ai / Claude apps
-Zip a skill folder and upload it under Settings → Capabilities → Skills.
+Zip a skill folder (folder name = skill name) and upload: Customize → Skills → + → Upload a skill.
 
-### Other agents
-Any agent that supports the Agent Skills format can load the `skills/<name>/` folders directly —
-check your tool's docs for its skills directory. For agents without skills support, paste the
-`SKILL.md` content into the system prompt / rules file (e.g. `AGENTS.md`).
+### Tools without skills support (Aider, Continue, ChatGPT chat, any LLM API)
+Use the instruction-file fallbacks in [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md): `AGENTS.md`, `CONVENTIONS.md` (Aider), `.continue/rules/`,
+custom/project instructions (ChatGPT), or the system prompt (API). The `skillctl` CLI (Rust, companion repo) can generate these files for you.
 
 ## Design principles
 1. **One skill, one job.** Focused descriptions trigger reliably.
