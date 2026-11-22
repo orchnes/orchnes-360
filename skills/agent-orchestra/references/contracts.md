@@ -7,13 +7,13 @@ role: build            # research | build | test | security | docs | content | d
 tier: T2
 goal: Add VAT calculation to checkout totals
 inputs:
-  - src/checkout/total.rs (lines 1-80)
-  - decision D4: VAT rates come from config, not hardcoded
+  - "src/checkout/total.rs (lines 1-80)"
+  - "decision D4: VAT rates come from config, not hardcoded"
 constraints:
   - Rust, no new dependencies
   - do not touch src/payments/**
 acceptance:
-  - cargo test checkout:: passes
+  - "cargo test checkout:: passes"
   - new tests cover 0%, 10%, 20% rates and rounding to 2 decimals
 output: unified diff + test output
 size_budget: ~60 changed lines
