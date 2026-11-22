@@ -1,3 +1,5 @@
+🇬🇧 English · 🇹🇷 [Türkçe](README.tr.md)
+
 # agent-skills
 
 Portable, token-efficient skills for AI agents. MIT licensed.
