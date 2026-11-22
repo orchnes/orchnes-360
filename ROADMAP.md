@@ -68,6 +68,7 @@ Skills are the runtime's brain; the runtime is what makes them run continuously.
 10. **Adaptive depth.** Detect the user's level; plain language for beginners, precise terms for experts.
 
 ## Quality
-- Every skill ships with eval scenarios (with vs without skill).
+- Every skill ships with eval scenarios (with vs without skill) — enforced by `scripts/validate.py`.
+- Frontmatter limited to Agent Skills spec fields (name, description, license, allowed-tools, metadata, compatibility) — enforced by the validator, mirroring the official `skills-ref` rules.
 - Region/domain maintainers via `CODEOWNERS`.
 - `scripts/validate.py` in CI.

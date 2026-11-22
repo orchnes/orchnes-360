@@ -7,6 +7,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 NAME_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 MAX_LINES = 500  # keep SKILL.md lean; move detail to references/
+# Allowed frontmatter fields per the Agent Skills spec (agentskills.io)
+ALLOWED_FIELDS = {"name", "description", "license", "allowed-tools", "metadata", "compatibility"}
 
 
 def parse_frontmatter(text: str) -> dict:
@@ -34,6 +36,9 @@ def check(skill_dir: Path) -> list[str]:
     except ValueError as e:
         return [f"{skill_dir.name}: {e}"]
     name, desc = fm.get("name", ""), fm.get("description", "")
+    extra = sorted(set(fm) - ALLOWED_FIELDS)
+    if extra:
+        errors.append(f"{skill_dir.name}: frontmatter fields not in spec: {', '.join(extra)}")
     if not NAME_RE.fullmatch(name) or len(name) > 64:
         errors.append(f"{skill_dir.name}: invalid name '{name}'")
     if name != skill_dir.name:
