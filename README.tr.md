@@ -2,7 +2,7 @@
 
 # Orchnes 360
 
-[![validate](https://github.com/orchnesai/orchnes-360/actions/workflows/validate.yml/badge.svg)](https://github.com/orchnesai/orchnes-360/actions/workflows/validate.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-spec%20compliant-6f42c1)](https://agentskills.io) ![skills](https://img.shields.io/badge/skills-26-success)
+[![validate](https://github.com/orchnesai/orchnes-360/actions/workflows/validate.yml/badge.svg)](https://github.com/orchnesai/orchnes-360/actions/workflows/validate.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-spec%20compliant-6f42c1)](https://agentskills.io) ![skills](https://img.shields.io/badge/skills-26-success) [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/orchnesai/orchnes-360/badge)](https://scorecard.dev/viewer/?uri=github.com/orchnesai/orchnes-360)
 
 **Yapay zekâ ajanları için uçtan uca skill'ler: fikirden çalışan bir işletmeye kadar, hangi yapay zekâ aracını kullanırsan kullan.**
 Ne istediğini söylemen yeterli; ajanlar tüm yol haritasını çıkarır, işi yürütür ve senden yalnızca karar ve onay ister.
